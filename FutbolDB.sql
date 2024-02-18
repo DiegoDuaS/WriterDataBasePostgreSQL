@@ -89,7 +89,7 @@ CREATE TABLE appearances (
 CREATE TABLE shots (
     gameID INT,
     shooterID INT,
-    assisterID INT NULL,
+    assisterID INT,
     minute INT,
     situation VARCHAR(15),
     lastAction VARCHAR(15),
@@ -98,11 +98,11 @@ CREATE TABLE shots (
     xGoal FLOAT,
     positionX FLOAT,
     positionY FLOAT,
-    PRIMARY KEY (gameID, shooterID, assisterID),
     FOREIGN KEY (gameID) REFERENCES games(gameID),
     FOREIGN KEY (shooterID) REFERENCES players(playerID),
     FOREIGN KEY (assisterID) REFERENCES players(playerID)
 );
+
 
 CREATE TABLE teamstats (
     gameID INT,
