@@ -17,6 +17,7 @@ def testear_conexion():
         conn.close()
     except OperationalError as e:
         print(f"Ocurrió un error al intentar conectarse a la base de datos: {e}")
+        
 testear_conexion()
 
 
@@ -89,10 +90,10 @@ def writer(tabla_db, archivo_csv):
 
 
 
-#writer("leagues","tu_direccion")
-#writer("players","tu_direccion")
-#writer("teams","tu_direccion")
-#writer("games","tu_direccion")
-#writer("appearances","tu_direccion")
-#writer("shots","tu_direccion")
-#writer("teamstats","tu_direccion")
+writer("leagues","leagues.csv")
+writer("players","players.csv")
+writer("teams","teams.csv")
+writer("games","games.csv")
+writer("appearances","appearances.csv")
+writer("shots","shots.csv")
+writer("teamstats","teamstats.csv")
